@@ -1,35 +1,36 @@
 public class BaseConverter{
 public static void main(String...args){
-System.out.println(toDecimal(101));
+System.out.println(convertToBase("AA",11,2));
 }
 public static String convertToBase(String number, int initialBase, int finalBase){
     int decimal = toDecimal(number,initialBase);
     String result = toOtherBase(decimal,finalBase);
 return result;
 }
-public static int toDecimal(String number int base){
+public static int toDecimal(String number, int base){
 int result = 0;
 int powerOf = 1;
 char character;
 int digit;
 
     for(int count = number.length()-1; count>=0; count--){    
-        character = number.charAt(count);
+        character = number.charAt(count);                                                              
 
         if(character >= '0' && character <= '9'){
             digit = character - '0';
         }else{
-            digit = character - 'A' + 10
+            digit = character - 'A' + 10;
         }
         result += digit * powerOf;
         powerOf *= base;
         } 
-return decimal;
+return result;
 }
 public static String toOtherBase(int decimal, int base){
 String result = "";
 int remainder;
-    
+char digit;    
+
     if(decimal == 0){
         return "0";
     }
