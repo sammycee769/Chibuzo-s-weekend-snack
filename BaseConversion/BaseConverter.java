@@ -1,6 +1,6 @@
 public class BaseConverter{
 public static void main(String...args){
-System.out.println(convertToBase("AA",11,2));
+System.out.println(convertToBase("aa",11,2));
 }
 public static String convertToBase(String number, int initialBase, int finalBase){
     int decimal = toDecimal(number,initialBase);
@@ -8,10 +8,13 @@ public static String convertToBase(String number, int initialBase, int finalBase
 return result;
 }
 public static int toDecimal(String number, int base){
+
+    number = number.toUpperCase();
 int result = 0;
 int powerOf = 1;
 char character;
 int digit;
+
 
     for(int count = number.length()-1; count>=0; count--){    
         character = number.charAt(count);                                                              
