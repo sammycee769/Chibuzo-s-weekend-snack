@@ -26,15 +26,10 @@ public class Visitors implements VisitorRepo {
     public void save(Visitor visitor) {
         if (visitor.getId() == 0) {
             visitor.setId(nextId++);
+        }
+        Visitor existing = findById(visitor.getId());
+        if (existing == null) {
             visitors.add(visitor);
-        } else {
-            Visitor existing = findById(visitor.getId());
-            if (existing != null) {
-                int index = visitors.indexOf(existing);
-                visitors.set(index, visitor);
-            } else {
-                visitors.add(visitor);
-            }
         }
     }
 
@@ -61,7 +56,7 @@ public class Visitors implements VisitorRepo {
         visitors.clear();
     }
 
-    public int count() {
+    public int getTotal() {
         return visitors.size();
     }
 }

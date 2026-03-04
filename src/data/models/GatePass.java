@@ -57,4 +57,6 @@ public class GatePass {
     public void setValid(boolean valid) {
         isValid = valid;
     }
+
+
 }

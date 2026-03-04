@@ -24,20 +24,15 @@ public class Residents implements ResidentRepo {
     }
 
     @Override
-    public Resident save(Resident resident) {
+    public void save(Resident resident) {
         if (resident.getId() == 0) {
             resident.setId(nextId++);
             residents.add(resident);
-        } else {
-            Resident existing = findById(resident.getId());
-            if (existing != null) {
-                int index = residents.indexOf(existing);
-                residents.set(index, resident);
-            } else {
-                residents.add(resident);
-            }
         }
-        return resident;
+        Resident existing = findById(resident.getId());
+        if (existing == null) {
+            residents.add(resident);
+        }
     }
 
     @Override
@@ -63,7 +58,7 @@ public class Residents implements ResidentRepo {
         residents.clear();
     }
 
-    public int count() {
+    public int getTotal() {
         return residents.size();
     }
 }

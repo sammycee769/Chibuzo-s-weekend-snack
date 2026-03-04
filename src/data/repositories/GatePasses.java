@@ -14,47 +14,43 @@ public class GatePasses implements GatePassRepo {
 
     @Override
     public GatePass findById(int id) {
-        for (GatePass pass : gatePasses) {
-            if (pass.getId() == id) {
-                return pass;
+        for (GatePass gatePass : gatePasses) {
+            if (gatePass.getId() == id) {
+                return gatePass;
             }
         }
         return null;
     }
 
     @Override
-    public GatePass save(GatePass pass) {
-        if (pass.getId() == 0) {
-            pass.setId(nextId++);
-            gatePasses.add(pass);
-        } else {
-            GatePass existing = findById(pass.getId());
-            if (existing != null) {
-                int index = gatePasses.indexOf(existing);
-                gatePasses.set(index, pass);
-            } else {
-                gatePasses.add(pass);
-            }
+    public void save(GatePass gatePass) {
+        if (gatePass.getId() == 0) {
+            gatePass.setId(nextId++);
         }
-        return pass;
+
+        GatePass existing = findById(gatePass.getId());
+        if (existing == null) {
+            gatePasses.add(gatePass);
+        }
     }
 
+
     @Override
-    public void delete(GatePass pass) {
-        gatePasses.remove(pass);
+    public void delete(GatePass gatePass) {
+        gatePasses.remove(gatePass);
     }
 
     @Override
     public void deleteById(int id) {
-        GatePass pass = findById(id);
-        if (pass != null) {
-            gatePasses.remove(pass);
+        GatePass gatePass = findById(id);
+        if (gatePass != null) {
+            gatePasses.remove(gatePass);
         }
     }
 
     @Override
-    public void deleteByObject(GatePass pass) {
-        delete(pass);
+    public void deleteByObject(GatePass gatePass) {
+        delete(gatePass);
     }
 
     @Override
@@ -62,7 +58,8 @@ public class GatePasses implements GatePassRepo {
         gatePasses.clear();
     }
 
-    public int count() {
+    public int getTotal() {
         return gatePasses.size();
     }
+
 }

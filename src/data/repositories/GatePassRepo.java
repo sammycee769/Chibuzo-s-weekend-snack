@@ -9,7 +9,7 @@ public interface GatePassRepo {
 
     GatePass findById(int id);
 
-    GatePass save(GatePass pass);
+    void save(GatePass pass);
 
     void delete(GatePass pass);
 
