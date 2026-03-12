@@ -27,10 +27,15 @@ public class Visitors implements VisitorRepo {
         if (visitor.getId() == 0) {
             visitor.setId(nextId++);
         }
-        Visitor existing = findById(visitor.getId());
-        if (existing == null) {
-            visitors.add(visitor);
+        for(Visitor existing : visitors){
+            if (existing.getId() == visitor.getId()){
+                Visitor updateVisitor = new Visitor();
+                updateVisitor.setId(visitor.getId());
+
+                visitors.add(updateVisitor);
+            }
         }
+
     }
 
     @Override

@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class GatePass {
     private int id;
     private int residentId;
-    private int visitorsId;
+    private String visitorName;
     private LocalDateTime createdAt =  LocalDateTime.now();
     private LocalDateTime expirationDate;
     private boolean isValid = true;
@@ -26,20 +26,16 @@ public class GatePass {
         this.residentId = residentId;
     }
 
-    public int getVisitorsId() {
-        return visitorsId;
+    public String getVisitorsName() {
+        return visitorName;
     }
 
-    public void setVisitorsId(int visitorsId) {
-        this.visitorsId = visitorsId;
+    public void setVisitorsName(String visitorsName) {
+        this.visitorName = visitorsName;
     }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
     }
 
     public LocalDateTime getExpirationDate() {

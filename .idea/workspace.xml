@@ -5,13 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2374c7a3-d4c1-4248-b7af-3d9acf853515" name="Changes" comment="pushing">
-      <change afterPath="$PROJECT_DIR$/src/controllers/deleteme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dtos/requests/deleteme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dtos/responses/deleteme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/deleteme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/GatePassImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/GatePassService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/deleteme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/requests/OnboardResidentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/ResidentManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/ResidentManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/ResidentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/ResidentServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/services/ResidentManagementServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/services/ResidentServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealEstate/data/models/GatePass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealEstate/data/models/GatePass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealEstate/data/models/Resident.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealEstate/data/models/Resident.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/GatePasses.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/GatePasses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/ResidentRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/ResidentRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/Residents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/Residents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/Visitors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealEstate/data/repositories/Visitors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/RealEstate/data/repositories/ResidentsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/RealEstate/data/repositories/ResidentsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/models/GatePass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/models/GatePass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/models/Resident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/models/Resident.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/repositories/GatePasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/GatePasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/repositories/ResidentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/ResidentRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/repositories/Residents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/Residents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/repositories/Visitors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/Visitors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dtos/requests/deleteme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/deleteme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/GatePassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/GatePassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/repositories/ResidentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/repositories/ResidentsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +39,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -57,40 +76,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.GatePassesTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testDelete_RemovesGatePass.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testFindAll_ReturnsAllGatePasses.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testRepositoryIsInitiallyEmpty_I_save_1_Repository_Becomes1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testSave_DoesNotAllowTwoGatePassesWithSameId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testThatISaveAGatePass_ICanFindItWithTheID.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testThatISaveMultiplePasses_IDsAreIncremented.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testThatWhenGatePassIsSaved_AnIDIsAssignedToIt.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GatePassesTest.testThatWhenGatePassIsSaved_AnID_IsAssignedToIt.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ResidentsTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VisitorsTest.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/home/semi/IdeaProjects/RealEstate/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.GatePassesTest.executor": "Run",
+    "JUnit.GatePassesTest.testDelete_RemovesGatePass.executor": "Run",
+    "JUnit.GatePassesTest.testFindAll_ReturnsAllGatePasses.executor": "Run",
+    "JUnit.GatePassesTest.testRepositoryIsInitiallyEmpty_I_save_1_Repository_Becomes1.executor": "Run",
+    "JUnit.GatePassesTest.testSave_DoesNotAllowTwoGatePassesWithSameId.executor": "Run",
+    "JUnit.GatePassesTest.testThatISaveAGatePass_ICanFindItWithTheID.executor": "Run",
+    "JUnit.GatePassesTest.testThatISaveMultiplePasses_IDsAreIncremented.executor": "Run",
+    "JUnit.GatePassesTest.testThatWhenGatePassIsSaved_AnIDIsAssignedToIt.executor": "Run",
+    "JUnit.GatePassesTest.testThatWhenGatePassIsSaved_AnID_IsAssignedToIt.executor": "Run",
+    "JUnit.ResidentManagementServiceTest.RegisterResident_ResidentsCountIsOne.executor": "Run",
+    "JUnit.ResidentManagementServiceTest.RegisterTwoResidentsWithSameEmail_ExceptionIsThrown.executor": "Run",
+    "JUnit.ResidentManagementServiceTest.RegisterTwoResidentsWithSamePhoneNumber_ExceptionIsThrown.executor": "Run",
+    "JUnit.ResidentServiceImplTest.RegisterOneResident_UpdateResident_ResidentsCountIsOne.executor": "Run",
+    "JUnit.ResidentServiceImplTest.RegisterTwoResidentsWithSamePhoneNumber_ExceptionIsThrown.executor": "Run",
+    "JUnit.ResidentServiceImplTest.executor": "Run",
+    "JUnit.ResidentServiceTest.executor": "Run",
+    "JUnit.ResidentsTest.executor": "Run",
+    "JUnit.ResidentsTest.testDeleteById_RemovesCorrectResident.executor": "Run",
+    "JUnit.ResidentsTest.testRepositoryIsInitiallyEmpty_I_save_1_Repository_Becomes1.executor": "Run",
+    "JUnit.ResidentsTest.testSave_DoesNotDuplicateExistingObject.executor": "Run",
+    "JUnit.ResidentsTest.testThatISaveAResident_ICanFindItWithTheID.executor": "Run",
+    "JUnit.ResidentsTest.test_that_resident_can_update.executor": "Run",
+    "JUnit.VisitorsTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/home/semi/IdeaProjects/RealEstate/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -99,53 +130,70 @@
       <recent name="data.repositories" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="services" />
       <recent name="data.repositories" />
       <recent name="data.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VisitorsTest">
-    <configuration name="GatePassesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ResidentManagementServiceTest.RegisterResident_ResidentsCountIsOne">
+    <configuration name="ResidentManagementServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RealEstate" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data.repositories.*" />
+          <option name="PATTERN" value="services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="data.repositories.GatePassesTest" />
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.ResidentManagementServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatePassesTest.testDelete_RemovesGatePass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ResidentManagementServiceTest.RegisterResident_ResidentsCountIsOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RealEstate" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data.repositories.*" />
+          <option name="PATTERN" value="services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="data.repositories.GatePassesTest" />
-      <option name="METHOD_NAME" value="testDelete_RemovesGatePass" />
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.ResidentManagementServiceTest" />
+      <option name="METHOD_NAME" value="RegisterResident_ResidentsCountIsOne" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatePassesTest.testSave_DoesNotAllowTwoGatePassesWithSameId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ResidentManagementServiceTest.RegisterTwoResidentsWithSameEmail_ExceptionIsThrown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RealEstate" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data.repositories.*" />
+          <option name="PATTERN" value="services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="data.repositories.GatePassesTest" />
-      <option name="METHOD_NAME" value="testSave_DoesNotAllowTwoGatePassesWithSameId" />
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.ResidentManagementServiceTest" />
+      <option name="METHOD_NAME" value="RegisterTwoResidentsWithSameEmail_ExceptionIsThrown" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResidentManagementServiceTest.RegisterTwoResidentsWithSamePhoneNumber_ExceptionIsThrown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RealEstate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.ResidentManagementServiceTest" />
+      <option name="METHOD_NAME" value="RegisterTwoResidentsWithSamePhoneNumber_ExceptionIsThrown" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,28 +214,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VisitorsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RealEstate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="data.repositories.VisitorsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VisitorsTest" />
-        <item itemvalue="JUnit.GatePassesTest" />
+        <item itemvalue="JUnit.ResidentManagementServiceTest.RegisterResident_ResidentsCountIsOne" />
+        <item itemvalue="JUnit.ResidentManagementServiceTest.RegisterTwoResidentsWithSamePhoneNumber_ExceptionIsThrown" />
+        <item itemvalue="JUnit.ResidentManagementServiceTest" />
+        <item itemvalue="JUnit.ResidentManagementServiceTest.RegisterTwoResidentsWithSameEmail_ExceptionIsThrown" />
         <item itemvalue="JUnit.ResidentsTest" />
-        <item itemvalue="JUnit.GatePassesTest.testSave_DoesNotAllowTwoGatePassesWithSameId" />
-        <item itemvalue="JUnit.GatePassesTest.testDelete_RemovesGatePass" />
       </list>
     </recent_temporary>
   </component>

@@ -14,6 +14,7 @@ class ResidentsTest {
     @BeforeEach
     void setUp() {
         residents = new Residents();
+        residents.clear();
     }
 
     @Test
@@ -26,6 +27,7 @@ class ResidentsTest {
 
         total = residents.getTotal();
         assertEquals(1, total);
+        residents.clear();
     }
 
     @Test
@@ -39,6 +41,7 @@ class ResidentsTest {
         assertEquals(1, resident.getId());
         total = residents.getTotal();
         assertEquals(1, total);
+        residents.clear();
     }
 
     @Test
@@ -71,6 +74,7 @@ class ResidentsTest {
         assertEquals(1, foundResident.getId());
         total = residents.getTotal();
         assertEquals(1, total);
+        residents.clear();
     }
 
     @Test
@@ -101,6 +105,7 @@ class ResidentsTest {
 
         total = residents.getTotal();
         assertEquals(2, total);
+        residents.clear();
     }
 
     @Test
@@ -129,6 +134,7 @@ class ResidentsTest {
         total = residents.getTotal();
         assertEquals(0, total);
         assertNull(residents.findById(1));
+        residents.clear();
     }
 
     @Test
@@ -170,5 +176,23 @@ class ResidentsTest {
 
         total = residents.getTotal();
         assertEquals(1, total);
+    }
+
+    @Test
+    void test_that_resident_can_update() {
+        Resident resident = new Resident();
+        resident.setName("samuel");
+        resident.setPhoneNumber("PhoneNumber");
+        residents.save(resident);
+
+        resident = new Resident();
+        resident.setName("Ayobami");
+        resident.setPhoneNumber("PhoneNumber");
+        residents.save(resident);
+
+        for(Resident r: residents.findAll()){
+            System.out.println(r.getName());
+        }
+
     }
 }

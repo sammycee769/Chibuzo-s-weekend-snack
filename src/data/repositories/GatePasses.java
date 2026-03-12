@@ -1,5 +1,6 @@
 package data.repositories;
 import data.models.GatePass;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,11 +27,17 @@ public class GatePasses implements GatePassRepo {
     public void save(GatePass gatePass) {
         if (gatePass.getId() == 0) {
             gatePass.setId(nextId++);
+            gatePasses.add(gatePass);
+            return;
         }
 
-        GatePass existing = findById(gatePass.getId());
-        if (existing == null) {
-            gatePasses.add(gatePass);
+        for(GatePass existing : gatePasses){
+            if (existing.getId() == gatePass.getId()){
+                GatePass updateRGatePass = new  GatePass();
+                updateRGatePass.setId(gatePass.getId());
+
+                gatePasses.add(updateRGatePass);
+            }
         }
     }
 
